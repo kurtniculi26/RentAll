@@ -1,0 +1,169 @@
+/* === Global Header === */
+.global-header {
+  width: 100%;               /* Make it stretch full screen */
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;           /* stays on top when scrolling */
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;     /* ensures padding doesn’t shrink width */
+}
+
+
+.global-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.global-header .brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.global-header .header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.global-header .nav-tab {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.global-header .nav-tab:hover {
+  color: #212529;
+}
+
+.global-header .nav-tab.active {
+  color: #212529;
+  font-weight: 500;
+}
+
+.global-header .nav-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ff6b35;
+  border-radius: 2px;
+}
+
+.global-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.global-header .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  background-color: #fff;
+}
+
+.global-header .search-input {
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #b4b6b7;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  width: 2000px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.global-header .search-input:focus {
+  border-color: #fd7e14;
+  background-color: #fff;
+}
+
+.global-header .search-button {
+  position: absolute;
+  left: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-button {
+  background: none;
+  border: 2px solid #666;       /* normal border */
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.profile-button.active {
+  border-color: #ff6b35;       /* active border color */
+}
+
+.profile-button:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
+
+/* avatar image stays circular */
+.profile-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.global-header .favorites-button,
+.global-headern {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  color: #666;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+.global-header .favorites-button:hover,
+.global-header .profile-button:hover {
+  background-color: #f8f9fa;
+}
+
+.global-header .profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}

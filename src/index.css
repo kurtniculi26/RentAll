@@ -1,0 +1,177 @@
+/* Base styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Fix for body and root elements */
+body, html {
+  margin: 0;            /* Remove default margin */
+  padding: 0;           /* Remove any padding */
+  height: 100%;         /* Ensure the body takes up the full viewport height */
+  width: 100%;          /* Ensure the body takes up the full viewport width */
+  display: flex;        /* Enable flexbox layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center;  /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  background-color: #242424;
+}
+
+/* Ensuring the root div fills the entire screen */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%; /* Ensures it takes up the full height */
+}
+
+/* Login container takes full screen width */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center content */
+  align-items: center;      /* Horizontally center content */
+  min-height: 100vh;        /* Ensure the container fills the entire viewport height */
+  background-color: #2b1b0f;
+  padding: 0;               /* Remove any default padding */
+  margin: 0;                /* Remove any default margin */
+  width: 100%;              /* Ensure the container stretches to full width */
+  box-sizing: border-box;   /* Ensures padding/margin don't affect width/height */
+}
+
+/* Top section with logo and title */
+.top-container {
+  text-align: center;
+  background-color: #000;
+  padding: 60px 0 20px 0;
+  width: 100%;              /* Full width of the container */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-sizing: border-box;   /* Ensure padding doesn't affect the width */
+}
+
+/* Bottom container with the form */
+.bottom-container {
+  background-color: #fff6ec;
+  padding: 25px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  width: 100%;              /* Full width of the container */
+  max-width: 500px;         /* Limit form width for larger screens */
+  margin-top: 20px;
+  box-sizing: border-box;   /* Prevent padding from affecting width */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;     /* Stretch form elements across the width */
+}
+
+/* Styling for the input labels */
+.label {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Input fields style */
+.input {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;             /* Ensure inputs take full width */
+  font-size: 16px;         /* Adjust font size */
+}
+
+/* Button style */
+.login-button {
+  background-color: #000;
+  padding: 15px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  width: 100%;             /* Ensure button takes full width */
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 16px;         /* Adjust font size */
+}
+
+.login-button:disabled {
+  background-color: #888;
+}
+
+/* Forgot password and Sign-up links */
+.forgot-section, .signup-section {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Highlighted text (Forgot password, Sign-up) */
+.highlight {
+  color: #facc15; /* Yellow */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-up-link {
+  color: #f97316; /* Orange */
+  font-weight: bold;
+  cursor: pointer;
+}
